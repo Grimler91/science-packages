@@ -1,9 +1,9 @@
 TERMUX_PKG_HOMEPAGE=https://www.openfoam.org
 TERMUX_PKG_DESCRIPTION="OpenFOAM is the free, open source CFD software"
 TERMUX_PKG_MAINTAINER="Henrik Grimler @Grimler91"
-TERMUX_PKG_VERSION=1706
-TERMUX_PKG_SRCURL="https://sourceforge.net/projects/openfoamplus/files/v$TERMUX_PKG_VERSION/OpenFOAM-v$TERMUX_PKG_VERSION.tgz"
-TERMUX_PKG_SHA256="7779048bb53798d9a5bd2b2be0bf302c5fd3dff98e29249d6e0ef7eeb83db79a"
+TERMUX_PKG_VERSION=1812
+TERMUX_PKG_SRCURL=https://sourceforge.net/projects/openfoamplus/files/v$TERMUX_PKG_VERSION/OpenFOAM-v$TERMUX_PKG_VERSION.tgz
+TERMUX_PKG_SHA256=d4d23d913419c6a364b1fe91509c1fadb5661bdf2eedb8fe9a8a005924eb2032
 TERMUX_PKG_DEPENDS="openmpi, flex, boost"
 TERMUX_PKG_BUILD_IN_SRC=yes
 TERMUX_PKG_HOSTBUILD=yes
@@ -46,5 +46,6 @@ termux_step_post_configure() {
 }
 
 termux_step_make() {
+	# cd src/
 	./Allwmake
 }

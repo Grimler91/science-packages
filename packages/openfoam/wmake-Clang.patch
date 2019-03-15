@@ -104,7 +104,7 @@ index 000000000..1002cb169
 --- /dev/null
 +++ b/wmake/rules/linuxAArch64Clang/general
 @@ -0,0 +1,8 @@
-+CPP        = cpp -traditional-cpp $(GFLAGS)
++CPP        = aarch64-linux-android-cpp -traditional-cpp $(GFLAGS)
 +
 +PROJECT_LIBS = -l$(WM_PROJECT) -ldl
 +
@@ -236,7 +236,7 @@ index 000000000..c1325ef89
 --- /dev/null
 +++ b/wmake/rules/linuxARM7Clang/general
 @@ -0,0 +1,9 @@
-+CPP        = cpp -traditional-cpp $(GFLAGS)
++CPP        = arm-linux-android-cpp -traditional-cpp $(GFLAGS)
 +LD         ?= ld
 +
 +PROJECT_LIBS = -l$(WM_PROJECT) -ldl
