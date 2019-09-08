@@ -61,6 +61,7 @@ termux_step_pre_configure() {
 }
 
 termux_step_make() {
+	unset LD_LIBRARY_PATH
 	./Allwmake
 	cd wmake/src
 	make clean
